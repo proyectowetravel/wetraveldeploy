@@ -1,25 +1,29 @@
-// require express
+ // require express
 const express = require("express");
 const cors = require("cors");
-const cookieParser = require("cookie-parser");
 const path = require('path');
+const cookieParser = require("cookie-parser");
+const app = express();
 //require .env
-/* require("dotenv").config(); */
-
-app.use(express.static(path.join(__dirname, 'client/build')));
-
-app.get('*', (req,res) =>{
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
-
  
- 
+
 // require rutas
 const router = require("./routes/accessibility");
 
 // declaracion de express
-const app = express();
+
+
 const { sequelize } = require("./utils/database");
+
+
+//deploy
+
+app.use(express.static(path.join(__dirname, 'client/build')));
+app.get('*', (req,res) =>{
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+
+
 
 // uses para JSON
 app.use(cookieParser());
