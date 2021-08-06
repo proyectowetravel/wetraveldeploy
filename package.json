@@ -1,0 +1,41 @@
+{
+  "name": "reto-tripulaciones",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "14.17.0"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriandez/reto-tripulaciones.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adriandez/reto-tripulaciones/issues"
+  },
+  "homepage": "https://github.com/adriandez/reto-tripulaciones#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "google-auth-library": "^7.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5",
+    "universal-cookie": "^4.0.4"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
